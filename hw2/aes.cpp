@@ -32,8 +32,8 @@ int main() {
 	/*
 	 * AES
 	 * CFB Mode (feedback size: 4 bytes)
-     * No Padding
-     */
+	 * No Padding
+	 */
 	CryptoPP::CFB_Mode<CryptoPP::AES>::Encryption test_aes_cfb;
 	std::string test_ciphertext_cfb;
 
@@ -65,8 +65,8 @@ int main() {
 	/*
 	 * AES
 	 * CBC Mode
-     * Zero Padding
-     */
+	 * Zero Padding
+	 */
 	CryptoPP::CBC_Mode<CryptoPP::AES>::Encryption test_aes_cbc;
 	std::string test_ciphertext_cbc;
 
@@ -246,7 +246,7 @@ int main() {
 	fout << ciphertext_cfb << std::endl
 		 << ciphertext_cbc_0 << std::endl
 		 << ciphertext_cbc_9 << std::endl
-	 	 << ciphertext_ecb << std::endl;
+		 << ciphertext_ecb << std::endl;
 	
 	return 0;
 }

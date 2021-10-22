@@ -346,13 +346,13 @@ public:
 
 
 int main() {
-	DES demo_enc(DES::string_to_int("37198391"));
-	uint64_t ciphertext = demo_enc.encrypt(DES::string_to_int("security"));
+	DES demo_enc(DES::string_to_int(KEY));
+	uint64_t ciphertext = demo_enc.encrypt(DES::string_to_int(PLAINTEXT));
 	std::cout << DES::int_to_hex(ciphertext) << std::endl;
 
 
-	DES demo_dec(DES::string_to_int("37198391"));
-	uint64_t plaintext = demo_dec.decrypt(DES::hex_to_int("361FD00BAC1D5809"));
+	DES demo_dec(DES::string_to_int(KEY));
+	uint64_t plaintext = demo_dec.decrypt(DES::hex_to_int(CIPHERTEXT));
 	std::cout << DES::int_to_string(plaintext) << std::endl;
 
 	return 0;
