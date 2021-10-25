@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-std=c++17 -O2
 DEBUG=-DDEBUG -Wall -Wextra -Wshadow
 
-LIB_CRYPTOPP=-L./cryptopp -lcryptopp
+LIB_CRYPTOPP=-L../cryptopp -lcryptopp
 
 des: des.cpp
 	$(CC) $(CFLAGS) des.cpp -o des
