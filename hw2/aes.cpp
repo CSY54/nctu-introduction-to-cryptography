@@ -47,7 +47,7 @@ int main() {
 		test_params_cfb
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_cfb(
 		TEST_PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -76,7 +76,7 @@ int main() {
 		reinterpret_cast<const CryptoPP::byte*>(TEST_IV.data())
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_cbc(
 		TEST_PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -104,7 +104,7 @@ int main() {
 		TEST_KEY.size()
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_ecb(
 		TEST_PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -139,7 +139,7 @@ int main() {
 		params_cfb
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_cfb(
 		PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -169,7 +169,7 @@ int main() {
 		reinterpret_cast<const CryptoPP::byte*>(IV_0.data())
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_cbc_0(
 		PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -199,7 +199,7 @@ int main() {
 		reinterpret_cast<const CryptoPP::byte*>(IV_9.data())
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_cbc_9(
 		PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(
@@ -227,7 +227,7 @@ int main() {
 		KEY.size()
 	);
 
-	new CryptoPP::StringSource(
+	CryptoPP::StringSource ss_ecb(
 		PLAINTEXT,
 		true,
 		new CryptoPP::StreamTransformationFilter(

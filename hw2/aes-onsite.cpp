@@ -24,7 +24,7 @@ int main() {
 			);
 
 			try {
-				new CryptoPP::StringSource(
+				CryptoPP::StringSource ss(
 					CIPHERTEXT,
 					true,
 					new CryptoPP::HexDecoder(
