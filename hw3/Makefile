@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-std=c++17 -O2 -Wall -Wextra -Wshadow
 DEBUG=-DDEBUG
 
-LIB_CRYPTOPP=-L../cryptopp -lcryptopp
+LIB_CRYPTOPP=-I.. ../cryptopp/libcryptopp.a
 
 rsa: rsa.cpp
 	$(CC) $(CFLAGS) rsa.cpp -o rsa $(LIB_CRYPTOPP)
